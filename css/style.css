@@ -164,13 +164,13 @@ header {
   color: #e4ebe4;
 }
 .logo a:hover {
-  color: inherit;
+  color: #e4ebe4;
 }
 .logo a:visited {
-  color: inherit;
+  color: #e4ebe4;
 }
 .logo a:active {
-  color: inherit;
+  color: #e4ebe4;
 }
 
 .header-nav {
