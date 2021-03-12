@@ -161,7 +161,7 @@ header {
   color:#e4ebe4;
 }
 .logo a, .logo a:hover, .logo a:visited, .logo a:active {
-  color: #e4ebe4;
+  color: #e4ebe4!important;
 }
 
 
