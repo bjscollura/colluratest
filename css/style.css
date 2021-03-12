@@ -160,18 +160,10 @@ header {
   font-family: 'Josefin Sans', sans-serif;
   color:#e4ebe4;
 }
-.logo a {
+.logo a, .logo a:hover, .logo a:visited, .logo a:active {
   color: #e4ebe4;
 }
-.logo a:hover {
-  color: #e4ebe4;
-}
-.logo a:visited {
-  color: #e4ebe4;
-}
-.logo a:active {
-  color: #e4ebe4;
-}
+
 
 .header-nav {
   display: flex;
