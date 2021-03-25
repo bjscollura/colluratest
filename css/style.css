@@ -1,6 +1,22 @@
 body {
-  background-color: #10c3e7;
+  background-color: #ECF5F6;
   color: #aaeaaa;
+}
+
+.logo {
+  margin: 10px;
+}
+
+#canvas_ctr {
+  background-color: #202026;
+  border: 1 solid #202026;
+  border-radius: 20px;
+  width: 520px;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

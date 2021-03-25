@@ -8,26 +8,26 @@
   <!-- Web Fonts and icons -->
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/86acd751e2.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
 </head>
 
 <body>
 <div class="header-container container">
 <header>
 
-  <div class="logo"><a href="index.html" style="color:#e4ebe4;">Brian Collura</a></div>
-  <ul class="header-nav">
-    <li><a href="index.html" class="nav-here">Home</a></li>
-    <li><a href="#">Projects</a></li>
-  </ul>
-  <ul class="header-links">
-    
-  </ul>
+  <div class="logo"><a href="index.html">
+    <img src="images/Bibo64.png" alt="80's style logo for Bibo 64" style="max-width: 500px;">
+  </a></div>
+
 </header>
 </div>
 
 <div class="page-container container">
   
   <p>Here be lions.</p>
+
+<div id="canvas_ctr" width="500px" height="500px">
+</div>
 
 </div>
 
@@ -41,5 +41,6 @@
 </div>
 
 <script src="js/style.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
