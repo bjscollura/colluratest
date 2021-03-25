@@ -10,10 +10,23 @@ $game-height: 500px;
 
 body {
     background-color: $color-fg;
-    color: $color-02;
+    color: $color-bg;
 }
 .logo {
   margin: 10px;
+}
+.stripes {
+  width: 50px;
+  height: 100%;
+  color: $color-01;
+  background-color: currentColor;
+  position: absolute;
+  top: 0;
+  right: 300px;
+  z-index: -1;
+  box-shadow: 
+    100px 0 0 0 $color-02,
+    200px 0 0 0 $color-03;
 }
 
 #canvas_ctr {

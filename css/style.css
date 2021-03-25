@@ -1,10 +1,22 @@
 body {
   background-color: #ECF5F6;
-  color: #aaeaaa;
+  color: #202026;
 }
 
 .logo {
   margin: 10px;
+}
+
+.stripes {
+  width: 50px;
+  height: 100%;
+  color: #10c3e7;
+  background-color: currentColor;
+  position: absolute;
+  top: 0;
+  right: 300px;
+  z-index: -1;
+  box-shadow: 100px 0 0 0 #aaeaaa, 200px 0 0 0 #F69CD2;
 }
 
 #canvas_ctr {
