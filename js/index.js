@@ -27,7 +27,7 @@ let app = new Application({
   backgroundColor: 0x202026
 });
 // Put Canvas into div
-document.getElementById("canvas_ctr").append(app.view);
+document.getElementById("game_container").append(app.view);
 let state;
 
 ////// Graphics Setup //////

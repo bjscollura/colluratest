@@ -1,3 +1,4 @@
+////// Variables //////
 $color-01: #10c3e7;
 $color-02: #aaeaaa;
 $color-03: #F69CD2;
@@ -6,21 +7,65 @@ $color-bg: #202026;
 $color-fg: #ECF5F6;
 $game-width: 500px;
 $game-height: 500px;
+// Breakpoints
+$media-min: $game-width + 20px;
+$media-tablet: 768px;
+@if $media-min >= 768px {
+  $media-tablet: $media-min; 
+}
+$media-laptop: 1200px;
+$media-max: 1400px;
 
 
 body {
     background-color: $color-fg;
     color: $color-bg;
 }
+
+////// Page Grids //////
+.page_grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer"; 
+  @media screen and (max-width: $media-min) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+  }
+  @media screen and (min-width: $media-min + 1) and (max-width: $media-tablet) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer"; 
+  }
+  @media screen and (min-width: $media-max + 1) {
+    grid-template-columns: 1fr 1fr ($game-width + 50px) 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header ..... ..... ....."
+      ".....  ....   main  ....  ....."
+      "....  footer footer footer ...."; 
+  }
+}
+header {
+  grid-area: header;
+}
 .logo {
   margin: 10px;
 }
-.stripes {
+.viz_stripes {
   width: 50px;
-  height: 100%;
+  height: 100vh;
   color: $color-01;
   background-color: currentColor;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 300px;
   z-index: -1;
@@ -29,14 +74,30 @@ body {
     200px 0 0 0 $color-03;
 }
 
-#canvas_ctr {
+main {
+  grid-area: main;
+  .game {
+
+  }
+  .gamelib {
+
+  }
+}
+#game_container {
   background-color: $color-bg;
   border: 1 solid $color-bg;
   border-radius: 20px;
   width: $game-width + 20;
-  height: $game-height + 20;
+  height: $game-height +20;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  // margin: auto;
+}
+aside {
+
+}
+
+footer {
+  grid-area: footer;
 }
