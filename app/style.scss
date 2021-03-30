@@ -5,18 +5,20 @@ $color-03: #F69CD2;
 $color-04: #EFF19B;
 $color-bg: #202026;
 $color-fg: #ECF5F6;
-$game-width: 500px;
-$game-height: 500px;
+$game-width: 640px;
+$game-height: 480px;
 // Breakpoints
 $media-min: $game-width + 20px;
 $media-tablet: 768px;
-@if $media-min >= 768px {
+@if $media-min > 768px {
   $media-tablet: $media-min; 
 }
 $media-laptop: 1200px;
 $media-max: 1400px;
 
-
+html {
+  font-size: 16px;
+}
 body {
     background-color: $color-fg;
     color: $color-bg;
@@ -25,33 +27,25 @@ body {
 ////// Page Grids //////
 .page_grid {
   display: grid;
-  gap: 50px;
-  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
-      "header"
-      "main"
-      "footer"; 
-  @media screen and (max-width: $media-min) {
-    grid-template-columns: 1fr;
+      "header header header header"
+      "game   game   game   game"
+      "footer footer footer footer"; 
+  @media screen and (min-width: $media-tablet) and (max-width: $media-laptop) {
+    grid-template-columns: repeat(6, 1fr);
     grid-template-areas: 
-      "header"
-      "main"
-      "footer";
+      "header header header header header header"
+      "game   game   game   game   game   game"
+      "footer footer footer footer footer footer"; 
   }
-  @media screen and (min-width: $media-min + 1) and (max-width: $media-tablet) {
-    grid-template-columns: 1fr;
+  @media screen and (min-width: $media-laptop + 1) {
+    grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
-      "header"
-      "main"
-      "footer"; 
-  }
-  @media screen and (min-width: $media-max + 1) {
-    grid-template-columns: 1fr 1fr ($game-width + 50px) 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header header ..... ..... ....."
-      ".....  ....   main  ....  ....."
-      "....  footer footer footer ...."; 
+      "header header header header header header header header header  header  header  header"
+      "game   game   game   game   game   game   game   game   gamelib gamelib gamelib gamelib"
+      "footer footer footer footer footer footer footer footer footer  footer  footer  footer"; 
   }
 }
 header {
@@ -74,21 +68,19 @@ header {
     200px 0 0 0 $color-03;
 }
 
-main {
-  grid-area: main;
-  .game {
-
-  }
-  .gamelib {
-
-  }
+.game {
+  grid-area: game;
 }
+.gamelib {
+  grid-area: gamelib;
+}
+
 #game_container {
-  background-color: $color-bg;
+  background-color: pink;
   border: 1 solid $color-bg;
   border-radius: 20px;
-  width: $game-width + 20;
-  height: $game-height +20;
+  width: $game-width + 20px;
+  height: $game-height +20px;
   display: flex;
   justify-content: center;
   align-items: center;

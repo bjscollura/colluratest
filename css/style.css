@@ -1,3 +1,7 @@
+html {
+  font-size: 16px;
+}
+
 body {
   background-color: #ECF5F6;
   color: #202026;
@@ -5,27 +9,20 @@ body {
 
 .page_grid {
   display: grid;
-  gap: 50px;
-  grid-template-columns: 1fr;
-  grid-template-areas: "header" "main" "footer";
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "header header header header" "game   game   game   game" "footer footer footer footer";
 }
-@media screen and (max-width: 520px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .page_grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "header header header header header header" "game   game   game   game   game   game" "footer footer footer footer footer footer";
   }
 }
-@media screen and (min-width: 521px) and (max-width: 768px) {
+@media screen and (min-width: 1201px) {
   .page_grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "header" "main" "footer";
-  }
-}
-@media screen and (min-width: 1401px) {
-  .page_grid {
-    grid-template-columns: 1fr 1fr 550px 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "header header ..... ..... ....." ".....  ....   main  ....  ....." "....  footer footer footer ....";
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "header header header header header header header header header  header  header  header" "game   game   game   game   game   game   game   game   gamelib gamelib gamelib gamelib" "footer footer footer footer footer footer footer footer footer  footer  footer  footer";
   }
 }
 
@@ -49,15 +46,20 @@ header {
   box-shadow: 100px 0 0 0 #aaeaaa, 200px 0 0 0 #F69CD2;
 }
 
-main {
-  grid-area: main;
+.game {
+  grid-area: game;
 }
+
+.gamelib {
+  grid-area: gamelib;
+}
+
 #game_container {
-  background-color: #202026;
+  background-color: pink;
   border: 1 solid #202026;
   border-radius: 20px;
-  width: 520px;
-  height: 520px;
+  width: 660px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
