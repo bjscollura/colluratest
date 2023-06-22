@@ -11,18 +11,24 @@ body {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "header header header header" "game   game   game   game" "footer footer footer footer";
+  grid-template-areas: "header header header header" 
+                       "game   game   game   game" 
+                       "footer footer footer footer";
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .page_grid {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "header header header header header header" "game   game   game   game   game   game" "footer footer footer footer footer footer";
+    grid-template-areas: "header header header header header header" 
+                        "game   game   game   game   game   game" 
+                        "footer footer footer footer footer footer";
   }
 }
 @media screen and (min-width: 1201px) {
   .page_grid {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "header header header header header header header header header  header  header  header" "game   game   game   game   game   game   game   game   gamelib gamelib gamelib gamelib" "footer footer footer footer footer footer footer footer footer  footer  footer  footer";
+    grid-template-areas: "header header header header header header header header header  header  header  header" 
+                        "game   game   game   game   game   game   game   game   gamelib gamelib gamelib gamelib" 
+                        "footer footer footer footer footer footer footer footer footer  footer  footer  footer";
   }
 }
 
